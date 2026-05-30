@@ -7,6 +7,20 @@ Simple web app demonstrating **HTML Form → Servlet (HTTP POST) → JSP**.
 2. `ProfileServlet.java` — reads the parameters, sets them as request attributes, forwards to the JSP.
 3. `result.jsp` — renders the submitted profile neatly.
 
+## Demo
+
+**1. Empty form** (`index.html`)
+
+![Empty form](demo-screenshot/empty-form.png)
+
+**2. Filled form** — ready to submit via HTTP POST
+
+![Filled form](demo-screenshot/filled-form.png)
+
+**3. Result** — Servlet processes the POST and forwards to `result.jsp`
+
+![JSP result](demo-screenshot/jsp-result.png)
+
 ## Tech
 - HTML5 + CSS3 (responsive, Font Awesome icons)
 - Java Servlet 4.0 (`javax.servlet`)
