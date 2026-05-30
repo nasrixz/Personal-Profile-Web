@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+    <div class="split-layout">
+        <div class="split-left">
+            <div class="left-content">
+                <h1>Hello.</h1>
+                <p>Let's build your personal profile.</p>
+            </div>
+        </div>
+        <div class="split-right">
+            <div class="form-container">
+                <form action="profile" method="post" class="modern-form">
+                    <div class="input-group">
+                        <input type="text" id="name" name="name" placeholder=" " required>
+                        <label for="name">Full Name</label>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <input type="text" id="studentId" name="studentId" placeholder=" " required>
+                            <label for="studentId">Student ID</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="program" name="program" placeholder=" " required>
+                            <label for="program">Program</label>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">Email Address</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" id="hobbies" name="hobbies" placeholder=" " required>
+                        <label for="hobbies">Hobbies</label>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea id="intro" name="intro" rows="3" placeholder=" " required></textarea>
+                        <label for="intro">Tell us about yourself</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Continue <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap');
+
+:root {
+    --black: #0a0a0a;
+    --dark-gray: #171717;
+    --gray: #737373;
+    --light-gray: #e5e5e5;
+    --white: #ffffff;
+    --accent: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Split Layout (Index) ---------- */
+.split-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.split-left {
+    flex: 1;
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding: 10%;
+}
+
+.left-content h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.04em;
+}
+
+.left-content p {
+    font-size: 1.25rem;
+    color: #a3a3a3;
+    font-weight: 300;
+}
+
+.split-right {
+    flex: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    background-color: var(--white);
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* ---------- Floating Label Form ---------- */
+.modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.input-row {
+    display: flex;
+    gap: 32px;
+}
+
+.input-row .input-group {
+    flex: 1;
+}
+
+.input-group {
+    position: relative;
+    padding-top: 16px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--light-gray);
+    padding: 8px 0;
+    font-size: 1.15rem;
+    font-family: inherit;
+    background: transparent;
+    color: var(--black);
+    transition: border-color 0.3s;
+}
+
+.input-group textarea {
+    resize: none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-bottom-color: var(--black);
+}
+
+.input-group label {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    font-size: 1.15rem;
+    color: var(--gray);
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+/* Float the label when focused or when input is not empty */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+    top: -4px;
+    font-size: 0.85rem;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.submit-btn {
+    margin-top: 20px;
+    padding: 16px 36px;
+    background-color: var(--accent);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: background-color 0.2s;
+    align-self: flex-start;
+}
+
+.submit-btn:hover {
+    background-color: var(--dark-gray);
+}
+
+/* ---------- Profile Layout (Result) ---------- */
+.profile-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.profile-sidebar {
+    width: 350px;
+    background-color: #fafafa;
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid var(--light-gray);
+}
+
+.avatar-large {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.profile-sidebar h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+.program-tag {
+    color: var(--gray);
+    font-size: 1.05rem;
+    margin-bottom: 40px;
+}
+
+.contact-links {
+    margin-bottom: auto;
+}
+
+.contact-links a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-link {
+    margin-top: 50px;
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--black);
+}
+
+.profile-main {
+    flex: 1;
+    padding: 80px 10%;
+    background-color: var(--white);
+}
+
+.content-section {
+    margin-bottom: 60px;
+}
+
+.content-section h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 12px;
+}
+
+.bio-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--dark-gray);
+    font-weight: 300;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.detail-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray);
+    font-weight: 500;
+}
+
+.detail-value {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 850px) {
+    .split-layout, .profile-layout {
+        flex-direction: column;
+    }
+    
+    .split-left {
+        padding: 60px 30px;
+        flex: none;
+    }
+    
+    .left-content h1 {
+        font-size: 3rem;
+    }
+    
+    .split-right {
+        padding: 40px 30px;
+    }
+    
+    .profile-sidebar {
+        width: 100%;
+        padding: 60px 30px;
+        border-right: none;
+        border-bottom: 1px solid var(--light-gray);
+    }
+    
+    .profile-main {
+        padding: 60px 30px;
+    }
+    
+    .input-row {
+        flex-direction: column;
+        gap: 32px;
+    }
+}
