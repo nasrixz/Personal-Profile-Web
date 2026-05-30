@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "PowerShell(Get-ChildItem -Force \"c:\\\\Users\\\\User\\\\Desktop\\\\Personal Profile Web\" | Select-Object Name; Write-Output \"---java---\"; \\(Get-Command java -ErrorAction SilentlyContinue\\).Source; \\(Get-Command mvn -ErrorAction SilentlyContinue\\).Source)",
-      "PowerShell(java -version; Write-Output \"---\"; Test-Path \"$env:CATALINA_HOME\"; $env:CATALINA_HOME)"
-    ]
-  }
-}
