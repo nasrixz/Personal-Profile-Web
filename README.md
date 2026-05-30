@@ -42,24 +42,24 @@ Personal Profile Web/
 ## How to run
 
 ### Requirements
-- JDK 8 (installed)
+- JDK 8
 - Apache **Tomcat 9.x** (uses the `javax.servlet` namespace — do NOT use Tomcat 10+, which switched to `jakarta.servlet`)
-- Maven (to build the `.war`) — or just deploy through an IDE.
+- **NetBeans IDE 8.2** (bundles Maven)
 
-### Option A — IDE (NetBeans / Eclipse / IntelliJ)
-1. Open the folder as a Maven project.
-2. Add a Tomcat 9 server.
-3. Right-click project → Run on Server.
-4. Browser opens at `http://localhost:8080/profile/`
+### Run in NetBeans IDE 8.2
+1. **File → Open Project** → select the `Personal Profile Web` folder (NetBeans detects the Maven `pom.xml`).
+2. Register Tomcat once: **Tools → Servers → Add Server → Apache Tomcat or TomEE**.
+   - **Server Location**: your Tomcat 9 folder (e.g. `C:\Tomcat9\apache-tomcat-9.0.118`).
+   - Set a manager **Username / Password** and keep *Create user if it does not exist* checked.
+3. Right-click the project → **Run** (or press the green ▶).
+4. NetBeans builds the WAR, deploys to Tomcat, and opens the browser automatically.
 
-### Option B — Maven + Tomcat manually
+![Running in NetBeans IDE 8.2](demo-screenshot/netbeans.png)
+
+### Build the WAR from the command line (optional)
 ```powershell
 mvn clean package
-# produces target/profile.war
-# copy it into Tomcat:
-copy target\profile.war "C:\path\to\tomcat9\webapps\"
-# start Tomcat, then open:
-# http://localhost:8080/profile/
+# produces target/profile.war  -> copy into <tomcat>/webapps/
 ```
 
 ## URLs
